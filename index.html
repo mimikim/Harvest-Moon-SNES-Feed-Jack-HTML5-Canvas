@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>sprite animation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/foundation.min.css" />
+</head>
+<body>
+<div class="credit">
+    <a href="http://www.mimikimwebdeveloper.com">Mimi Kim Web Developer</a>
+</div>
+<div id="container">
+    <div id="canvas-container">
+        <canvas id="eating" height="500" width="500">
+            Canvas is not supported by your browser
+        </canvas>
+    </div>
+
+    <div class="selectors">
+        <div class="text">
+            <h1>Feed Jack!</h1>
+            <p>
+                Use the dropdowns below to select a food item or change the background.
+            </p>
+            <p>
+                You can change to a different item during the animation or stop the animation altogether.
+            </p>
+        </div>
+        <div class="forms">
+            <form id="food-selector">
+                <label>Select food</label>
+                <select id="food-select">
+                    <option value="assets/images/berryofwildgrape.png">Berry of Wild Grape</option>
+                    <option value="assets/images/cake.png">Cake</option>
+                    <option value="assets/images/chicken.png">Chicken</option>
+                    <option value="assets/images/chicken-statue.png">Chicken Statue</option>
+                    <option value="assets/images/corn.png">Corn</option>
+                    <option value="assets/images/croissant.png">Croissant</option>
+                    <option value="assets/images/dumpling.png">Dumpling</option>
+                    <option value="assets/images/egg.png">Egg</option>
+                    <option value="assets/images/egg-broken.png">Egg Broken</option>
+                    <option value="assets/images/elf.png">Elf</option>
+                    <option value="assets/images/fancyflower.png">Fancy Flower</option>
+                    <option value="assets/images/fish.png">Fish</option>
+                    <option value="assets/images/flower.png">Flower</option>
+                    <option value="assets/images/hay.png">Hay</option>
+                    <option value="assets/images/herb.png">Herb</option>
+                    <option value="assets/images/milk-large.png">Milk Large</option>
+                    <option value="assets/images/milk-small.png">Milk Small</option>
+                    <option value="assets/images/mole.png">Mole</option>
+                    <option value="assets/images/potato.png">Potato</option>
+                    <option value="assets/images/potato-broken.png">Potato Broken</option>
+                    <option value="assets/images/powerberry.png">Power Berry</option>
+                    <option value="assets/images/rice-cake.png">Rice Cake</option>
+                    <option value="assets/images/rock.png">Rock</option>
+                    <option value="assets/images/tomato.png">Tomato</option>
+                    <option value="assets/images/turnip.png">Turnip</option>
+                    <option value="assets/images/weed.png">Weed</option>
+                    <option value="assets/images/winterflower.png">Winter Flower</option>
+                </select>
+                <input type="submit" value="Start Animation" id="start-animation">
+                <input type="button" value="Stop Animation" id="stop-animation">
+            </form>
+
+            <form id="background-selector">
+                <label>Change background</label>
+                <select id="background-select">
+                    <option value="assets/images/home_winter.png">Home (Winter)</option>
+                    <option value="assets/images/home_bedroom.png">Bedroom</option>
+                    <option value="assets/images/church.png">Church</option>
+                    <option value="assets/images/cow-shed.png">Cow Shed</option>
+                    <option value="assets/images/fishing-spot.png">Fishing Spot (Winter)</option>
+                    <option value="assets/images/home_kitchen.png">Kitchen</option>
+                    <option value="assets/images/town_bar.png">Town Bar (Winter)</option>
+                </select>
+                <input type="submit" value="Change Background">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
