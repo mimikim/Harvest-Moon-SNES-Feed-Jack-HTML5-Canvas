@@ -48,7 +48,7 @@ window.onload = function() {
 
         var frameIndex = 0,
             tickCount = 0,
-            ticksPerFrame = 10,
+            ticksPerFrame = 15,
             numberOfFrames = 11;
 
         function clear_canvas() {
