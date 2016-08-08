@@ -78,15 +78,12 @@ window.onload = function() {
 
                 // if we are on frames 2+ get rid of food image
                 if( frameIndex > 2 ) {
-
                     clear_canvas();
-
                     jack_render( frameIndex );
 
                 } else {
                     // else, show food image
                     clear_canvas();
-
                     draw_food_image();
                     jack_render( frameIndex );
                 }
@@ -134,25 +131,25 @@ window.onload = function() {
             };
         }
 
-        // get selected food URL
-        function get_food_url() {
+        // get selected food URL and x/y position
+        function get_food_data() {
 
-            var select = document.getElementById('food-select');
+            var select = document.getElementById('food-select'),
+                selected_option = select.options[select.selectedIndex];
 
             // new "food" image object src is selected value
-            food.src = select.options[select.selectedIndex].value;
+            food.src = selected_option.value;
+
+            // redefine food_position_x and y
+            food_position_x = selected_option.getAttribute('data-x-value') || 160;
+            food_position_y = selected_option.getAttribute('data-y-value') || 240;
         }
 
 
         // draw food image
         function draw_food_image() {
+
             ctx.globalCompositeOperation="destination-over";
-
-            // add x/y based on extra data attrs
-            // maybe, get selected image height/width dimensions
-            // subtract that from standard positioned image
-            // add the value to food_position_x and y values
-
             ctx.drawImage( food, food_position_x, food_position_y );
         }
 
@@ -167,7 +164,7 @@ window.onload = function() {
 
             animation_button_start.value = 'Change Food Item';
 
-            get_food_url();
+            get_food_data();
 
             frameIndex = 0;
 
