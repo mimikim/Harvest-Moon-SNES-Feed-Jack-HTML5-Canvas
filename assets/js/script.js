@@ -38,11 +38,18 @@ window.onload = function() {
             jack_position_x = 200,
             jack_position_y = 240;
 
+        jackImage.src = "assets/images/jack-eating.png";
+
         var food = new Image(),
             food_position_x = 160,
             food_position_y = 240;
 
         var requestID = undefined;
+
+        var frameIndex = 0,
+            tickCount = 0,
+            ticksPerFrame = 10,
+            numberOfFrames = 11;
 
         function clear_canvas() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -50,79 +57,71 @@ window.onload = function() {
 
         function jack_animation_loop() {
 
-            jack.update();
-            jack.render();
+            tickCount += 1;
 
+            // once tickcount > ticksperframe, we can update to the next frame
+            if (tickCount > ticksPerFrame) {
+
+                // set wait counter back to 0
+                tickCount = 0;
+
+                // If the current frame index is in range
+                if (frameIndex < (numberOfFrames - 1) ) {
+
+                    // Go to the next frame
+                    frameIndex += 1;
+
+                } else {
+                    // go back to the beginning
+                    frameIndex = 0;
+                }
+
+                // if we are on frames 2+ get rid of food image
+                if( frameIndex > 2 ) {
+
+                    clear_canvas();
+
+                    jack_render( frameIndex );
+
+                } else {
+                    // else, show food image
+                    clear_canvas();
+
+                    draw_food_image();
+                    jack_render( frameIndex );
+                }
+            }
+
+            // continue to loop
             requestID = window.requestAnimationFrame( jack_animation_loop );
         }
 
-        function sprite (options) {
+        function jack_render( frameIndex ) {
 
-            var that = {},
-                frameIndex = 0,
-                tickCount = 0,
-                ticksPerFrame = options.ticksPerFrame || 0,
-                numberOfFrames = options.numberOfFrames || 1;
+            /*
+                x coordinates where to start clipping
+                y coordinate where to start clipping
+                width of clipped portion
+                height of clipped portion
+                x coordinate to place the image
+                y coordinate to place the image
+                width of image
+                height of image
+            */
 
-            that.context = options.context;
-            that.width = options.width;
-            that.height = options.height;
-            that.image = options.image;
+            ctx.drawImage(
+                jackImage,
+                (frameIndex * 1045) / 11,
+                0,
+                95,
+                120,
+                jack_position_x,
+                jack_position_y,
+                95,
+                120
+            );
 
-            that.update = function () {
-
-                tickCount += 1;
-
-                if (tickCount > ticksPerFrame) {
-
-                    tickCount = 0;
-
-                    // If the current frame index is in range
-                    if (frameIndex < numberOfFrames - 1) {
-                        // Go to the next frame
-                        frameIndex += 1;
-                    } else {
-                        frameIndex = 0;
-                    }
-                }
-            };
-
-            that.render = function () {
-
-                // Clear the canvas
-                clear_canvas();
-
-                draw_food_image();
-
-                // Draw the animation
-                that.context.drawImage(
-                    that.image,
-                    frameIndex * that.width / numberOfFrames,
-                    0,
-                    that.width / numberOfFrames,
-                    that.height,
-                    jack_position_x,
-                    jack_position_y,
-                    that.width / numberOfFrames,
-                    that.height
-                );
-            };
-
-            return that;
         }
-
-        // Create sprite
-        jack = sprite({
-            context: canvas.getContext("2d"),
-            width: 1045,
-            height: 120,
-            image: jackImage,
-            numberOfFrames: 11,
-            ticksPerFrame: 10
-        });
-
-        jackImage.src = "assets/images/jack-eating.png";
-
 
         jack_static();
         function jack_static() {
@@ -148,13 +147,19 @@ window.onload = function() {
         // draw food image
         function draw_food_image() {
             ctx.globalCompositeOperation="destination-over";
+
+            // add x/y based on extra data attrs
+            // maybe, get selected image height/width dimensions
+            // subtract that from standard positioned image
+            // add the value to food_position_x and y values
+
             ctx.drawImage( food, food_position_x, food_position_y );
         }
 
 
         var animation_button_start = document.getElementById('start-animation');
 
-        // set up food form submit functions
+        // start eating animation
         var food_form = document.getElementById('food-selector');
         food_form.addEventListener("submit", function( event ){
 
@@ -163,6 +168,8 @@ window.onload = function() {
             animation_button_start.value = 'Change Food Item';
 
             get_food_url();
+
+            frameIndex = 0;
 
             if (!requestID) {
                 jack_animation_loop();
@@ -179,6 +186,8 @@ window.onload = function() {
             }
 
             animation_button_start.value = 'Start Animation';
+
+            frameIndex = 0;
 
             clear_canvas();
             jack_static();
