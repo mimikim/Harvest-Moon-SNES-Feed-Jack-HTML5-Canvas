@@ -1,5 +1,58 @@
+// load sprite module
+var loadSprites = new function() {
+
+    var foodSelection = document.getElementById('food-select'),
+        options = '',
+        json_obj = [];
+
+    // load JSON with XMLHttpRequest
+    function load_json(callback) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // pass results into callback function
+                callback( this.responseText );
+            }
+        };
+        xhttp.open("GET", "sprites.json", true);
+        xhttp.send(null);
+    }
+
+    // generate html
+    function generate_options( object ) {
+        // for each element in passed object
+        for( var key in object ) {
+            options += '<option value="' + object[key]['url']
+                    + '" data-x-value="' + object[key]['x-pos']
+                    + '" data-y-value="' + object[key]['y-pos']
+                    + '">' + object[key]['name'] + '</option>\n';
+        }
+    }
+
+    // return html
+    function init() {
+        load_json(function(response) {
+            // parse json string into object
+            json_obj = JSON.parse(response);
+
+            // generate list of options
+            generate_options(json_obj);
+
+            // plug into select dropdown
+            foodSelection.innerHTML = options;
+        });
+    }
+
+    return {
+        init : init
+    }
+};
+
 // window onload waits until all images are loaded
 window.onload = function() {
+    // load sprites
+    loadSprites.init();
+
     (function() {
         // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
         // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smarter-animating
