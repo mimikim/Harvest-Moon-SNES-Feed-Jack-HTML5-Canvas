@@ -8,6 +8,10 @@ const eslint = require( 'gulp-eslint' ),
   order = require( 'gulp-order' );
 
 module.exports = () => {
+
+  gulp.src( [ 'src/assets/js/sprites.json' ] )
+    .pipe( gulp.dest( 'docs/assets/js' ) );
+
   return gulp.src( 'src/assets/js/**' )
     .pipe( eslint() )
     .pipe( babel() )

@@ -13,7 +13,7 @@ class View {
         }
       };
 
-      xhttp.open( 'GET', '../sprites.json', true );
+      xhttp.open( 'GET', './assets/js/sprites.json', true );
       xhttp.send( null );
     } );
 
@@ -24,11 +24,9 @@ class View {
 
       // for each object in passed array, destructure properties and create html
       array.forEach( ( object ) => {
-
         const { name, url, 'x-pos': xpos, 'y-pos': ypos } = object;
-        let foodSelector = document.getElementById( 'js-food-select' );
 
-        foodSelector.innerHTML += `<option value="${url}" data-x-value="${xpos}" data-y-value="${ypos}">${name}</option>\n`;
+        document.getElementById( 'js-food-select' ).innerHTML += `<option value="${url}" data-x-value="${xpos}" data-y-value="${ypos}">${name}</option>\n`;
 
       } );
     } );

@@ -1,0 +1,164 @@
+[
+  {
+    "name"  : "Berry of Wild Grape",
+    "url"   : "assets/images/berryofwildgrape.png",
+    "x-pos" : "160",
+    "y-pos" : "240"
+  },
+  {
+    "name"  : "Cake",
+    "url"   : "assets/images/cake.png",
+    "x-pos" : "145",
+    "y-pos" : "250"
+  },
+  {
+    "name"  : "Chicken",
+    "url"   : "assets/images/chicken.png",
+    "x-pos" : "150",
+    "y-pos" : "235"
+  },
+  {
+    "name"  : "Chicken Statue",
+    "url"   : "assets/images/chicken-statue.png",
+    "x-pos" : "150",
+    "y-pos" : "235"
+  },
+  {
+    "name"  : "Corn",
+    "url"   : "assets/images/corn.png",
+    "x-pos" : "155",
+    "y-pos" : "245"
+  },
+  {
+    "name"  : "Croissant",
+    "url"   : "assets/images/croissant.png",
+    "x-pos" : "140",
+    "y-pos" : "250"
+  },
+  {
+    "name"  : "Dumpling",
+    "url"   : "assets/images/dumpling.png",
+    "x-pos" : "155",
+    "y-pos" : "250"
+  },
+  {
+    "name"  : "Egg",
+    "url"   : "assets/images/egg.png",
+    "x-pos" : "180",
+    "y-pos" : "245"
+  },
+  {
+    "name"  : "Egg Broken",
+    "url"   : "assets/images/egg-broken.png",
+    "x-pos" : "145",
+    "y-pos" : "245"
+  },
+  {
+    "name"  : "Elf",
+    "url"   : "assets/images/elf.png",
+    "x-pos" : "170",
+    "y-pos" : "230"
+  },
+  {
+    "name"  : "Fancy Flower",
+    "url"   : "assets/images/fancyflower.png",
+    "x-pos" : "145",
+    "y-pos" : "230"
+  },
+  {
+    "name"  : "Fish",
+    "url"   : "assets/images/fish.png",
+    "x-pos" : "160",
+    "y-pos" : "260"
+  },
+  {
+    "name"  : "Flower",
+    "url"   : "assets/images/flower.png",
+    "x-pos" : "150",
+    "y-pos" : "250"
+  },
+  {
+    "name"  : "Hay",
+    "url"   : "assets/images/hay.png",
+    "x-pos" : "140",
+    "y-pos" : "250"
+  },
+  {
+    "name"  : "Herb",
+    "url"   : "assets/images/herb.png",
+    "x-pos" : "165",
+    "y-pos" : "240"
+  },
+  {
+    "name"  : "Milk Large",
+    "url"   : "assets/images/milk-large.png",
+    "x-pos" : "145",
+    "y-pos" : "225"
+  },
+  {
+    "name"  : "Milk Small",
+    "url"   : "assets/images/milk-small.png",
+    "x-pos" : "155",
+    "y-pos" : "240"
+  },
+  {
+    "name"  : "Mole",
+    "url"   : "assets/images/mole.png",
+    "x-pos" : "150",
+    "y-pos" : "240"
+  },
+  {
+    "name"  : "Potato",
+    "url"   : "assets/images/potato.png",
+    "x-pos" : "160",
+    "y-pos" : "245"
+  },
+  {
+    "name"  : "Potato Broken",
+    "url"   : "assets/images/potato-broken.png",
+    "x-pos" : "145",
+    "y-pos" : "235"
+  },
+  {
+    "name"  : "Power Berry",
+    "url"   : "assets/images/powerberry.png",
+    "x-pos" : "160",
+    "y-pos" : "240"
+  },
+  {
+    "name"  : "Rice Cake",
+    "url"   : "assets/images/rice-cake.png",
+    "x-pos" : "155",
+    "y-pos" : "255"
+  },
+  {
+    "name"  : "Rock",
+    "url"   : "assets/images/rock.png",
+    "x-pos" : "150",
+    "y-pos" : "245"
+  },
+  {
+    "name"  : "Tomato",
+    "url"   : "assets/images/tomato.png",
+    "x-pos" : "160",
+    "y-pos" : "240"
+  },
+  {
+    "name"  : "Turnip",
+    "url"   : "assets/images/turnip.png",
+    "x-pos" : "160",
+    "y-pos" : "235"
+  },
+  {
+    "name"  : "Weed",
+    "url"   : "assets/images/weed.png",
+    "x-pos" : "150",
+    "y-pos" : "230"
+  },
+  {
+    "name"  : "Winter Flower",
+    "url"   : "assets/images/winterflower.png",
+    "x-pos" : "145",
+    "y-pos" : "225"
+  }
+]
