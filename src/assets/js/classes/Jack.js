@@ -43,15 +43,14 @@ class Jack {
       Jack.clearCanvas();
       this.renderFrame( window.hmcanvas.frameIndex );
 
+      // only draw food for the first 3 frames
       if( window.hmcanvas.frameIndex < 3 ) {
         window.hmcanvas.food.draw();
       }
-
     }
 
     // remember to use either this.loop.bind(this), or use arrow function to ensure correct "this"
     window.hmcanvas.requestID = window.requestAnimationFrame( () => this.loop() );
-
   }
 
   // method: renders frame
@@ -90,4 +89,5 @@ class Jack {
       window.hmcanvas.ctx.drawImage( jackStanding, this.jackImage.xpos+5, this.jackImage.ypos+5 );
     };
   }
+
 }

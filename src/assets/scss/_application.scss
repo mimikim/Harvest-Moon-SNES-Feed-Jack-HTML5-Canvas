@@ -1,0 +1,76 @@
+select {
+  appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 15px;
+  position: relative;
+
+  @media ( min-width: $medium ) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.canvas-container {
+  background: url('../images/home_winter.png') 0/cover no-repeat;
+  height: 100%;
+  width: 100%;
+
+  @media( min-width: $small ) {
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+  }
+
+  > .canvas {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.selectors {
+  margin-top: 20px;
+
+  @media ( min-width: $medium ) {
+    flex-basis: calc( 100% - 520px );
+    margin-left: 20px;
+    margin-top: 0;
+  }
+}
+
+.btn-start {
+  display: inline-block;
+  margin-right: 20px;
+
+  @media ( min-width: $medium ) {
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}
+
+.background-form {
+  margin-top: 30px;
+}
+
+.credit {
+  font-size: 14px;
+  padding: 5px 15px 0;
+  text-align: right;
+
+  > a {
+    color: $blue;
+    text-decoration: none;
+    transition: color 0.4s linear;
+
+    &:hover {
+      color: $blue-light;
+    }
+  }
+}

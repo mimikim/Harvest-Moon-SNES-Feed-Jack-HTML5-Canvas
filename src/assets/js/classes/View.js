@@ -1,8 +1,6 @@
 class View {
 
   constructor() {
-    this.foodSelector = document.getElementById( 'food-select' );
-    this.options = '';
 
     // create new Promise
     let promise = new Promise( ( resolve ) => {
@@ -21,21 +19,18 @@ class View {
 
     // then, create resolve callback
     promise.then( response => {
-      this.setHTML( JSON.parse(response) );
-      this.foodSelector.innerHTML = this.options;
-    } );
-  }
 
-  // generate html
-  setHTML( array ) {
+      let array = JSON.parse(response);
 
-    // for each object in passed array, destructure properties and create html
-    array.forEach( ( object ) => {
+      // for each object in passed array, destructure properties and create html
+      array.forEach( ( object ) => {
 
-      const { name, url, 'x-pos': xpos, 'y-pos': ypos } = object;
+        const { name, url, 'x-pos': xpos, 'y-pos': ypos } = object;
+        let foodSelector = document.getElementById( 'js-food-select' );
 
-      this.options += `<option value="${url}" data-x-value="${xpos}" data-y-value="${ypos}">${name}</option>\n`;
+        foodSelector.innerHTML += `<option value="${url}" data-x-value="${xpos}" data-y-value="${ypos}">${name}</option>\n`;
 
+      } );
     } );
   }
 

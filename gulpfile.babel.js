@@ -7,4 +7,4 @@ let gulp = require( './gulp' )( [
   'watch'
 ] );
 
-gulp.task( 'default', [ 'js', 'css', 'html' ] );
+gulp.task( 'default', [ 'js', 'css', 'html', 'watch' ] );
