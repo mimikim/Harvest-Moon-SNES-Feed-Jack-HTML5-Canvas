@@ -20,7 +20,7 @@ class View {
     // then, create resolve callback
     promise.then( response => {
 
-      let array = JSON.parse(response);
+      let array = JSON.parse( response );
 
       // for each object in passed array, destructure properties and create html
       array.forEach( ( object ) => {

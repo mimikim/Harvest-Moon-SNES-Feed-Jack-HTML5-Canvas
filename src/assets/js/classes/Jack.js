@@ -45,7 +45,7 @@ class Jack {
 
       // only draw food for the first 3 frames
       if( window.hmcanvas.frameIndex < 3 ) {
-        window.hmcanvas.food.draw();
+        window.hmcanvas.food.draw( window.hmcanvas.ctx );
       }
     }
 
@@ -89,5 +89,4 @@ class Jack {
       window.hmcanvas.ctx.drawImage( jackStanding, this.jackImage.xpos+5, this.jackImage.ypos+5 );
     };
   }
-
 }

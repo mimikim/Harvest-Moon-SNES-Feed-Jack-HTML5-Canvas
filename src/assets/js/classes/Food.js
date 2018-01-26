@@ -21,7 +21,7 @@ class Food {
   }
 
   // method: draws food sprite
-  draw() {
-    window.hmcanvas.ctx.drawImage( this.food, this.food.xpos, this.food.ypos );
+  draw( drawingContext ) {
+    drawingContext.drawImage( this.food, this.food.xpos, this.food.ypos );
   }
 }

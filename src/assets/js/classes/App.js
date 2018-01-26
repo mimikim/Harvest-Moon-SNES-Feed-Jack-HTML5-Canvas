@@ -15,6 +15,7 @@ class App {
   setVars() {
     // button
     this.btnStart = document.getElementById( 'js-start' );
+    this.bg = document.getElementById( 'js-background-select' );
 
     // global var
     window.hmcanvas = window.hmcanvas || {};
@@ -30,17 +31,12 @@ class App {
     window.hmcanvas.jack = new Jack;
   }
 
-  // method: set Background image
+  // method: change Background image
   setBackgroundImg() {
-
-    document.getElementById( 'js-background-form' ).addEventListener( 'submit', e => {
-      e.preventDefault();
-
-      let select = document.getElementById( 'js-background-select' );
-      const background_url = select.options[ select.selectedIndex ].value;
-
+    this.bg.addEventListener( 'change', () => {
+      const background_url = this.bg.options[ this.bg.selectedIndex ].value;
       document.getElementById( 'js-canvas-container' ).style.backgroundImage = `url('${background_url}')`;
-    } );
+    });
   }
 
   // method: start Animation event listener
