@@ -18,13 +18,13 @@ class App {
     this.bg = document.getElementById( 'js-background-select' );
 
     // global var
-    window.hmcanvas = window.hmcanvas || {};
-    window.hmcanvas.requestID = undefined;
-    window.hmcanvas.frameIndex = 0;
-
-    // add canvas
-    window.hmcanvas.canvas = document.getElementById( 'js-canvas' );
-    window.hmcanvas.ctx = window.hmcanvas.canvas.getContext( '2d' );
+    // window.hmcanvas = window.hmcanvas || {};
+    // window.hmcanvas.requestID = undefined;
+    // window.hmcanvas.frameIndex = 0;
+    //
+    // // add canvas
+    // window.hmcanvas.canvas = document.getElementById( 'js-canvas' );
+    // window.hmcanvas.ctx = window.hmcanvas.canvas.getContext( '2d' );
 
     // init class instances
     window.hmcanvas.food = new Food;

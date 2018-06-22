@@ -9,21 +9,21 @@ class Jack {
 
   setVars() {
     // jack obj
-    this.jackImage = new Image();
+    this.jackImage = new Image(); // creates <img>
     this.jackImage.src = "./assets/images/jack-eating.png";
     this.jackImage.xpos = 200;
     this.jackImage.ypos = 240;
 
     // frame ticks
-    this.tickCount = 0;
-    this.ticksPerFrame = 15;
-    this.numberOfFrames = 11;
+    // this.tickCount = 0;
+    // this.ticksPerFrame = 15;
+    // this.numberOfFrames = 11;
   }
 
   // static method: clears canvas
-  static clearCanvas() {
-    window.hmcanvas.ctx.clearRect( 0, 0,  window.hmcanvas.canvas.width,  window.hmcanvas.canvas.height );
-  }
+  // static clearCanvas() {
+  //   window.hmcanvas.ctx.clearRect( 0, 0,  window.hmcanvas.canvas.width,  window.hmcanvas.canvas.height );
+  // }
 
   // method: animation loop. runs repeatedly, updating tickCount until its time to redraw the next frame
   loop() {
@@ -81,12 +81,12 @@ class Jack {
   }
 
   // method: resets Jack sprite
-  reset() {
-    let jackStanding = new Image();
-    jackStanding.src = "./assets/images/jack-standing.png";
-
-    jackStanding.onload = () => {
-      window.hmcanvas.ctx.drawImage( jackStanding, this.jackImage.xpos+5, this.jackImage.ypos+5 );
-    };
-  }
+  // reset() {
+  //   let jackStanding = new Image();
+  //   jackStanding.src = "./assets/images/jack-standing.png";
+  //
+  //   jackStanding.onload = () => {
+  //     window.hmcanvas.ctx.drawImage( jackStanding, this.jackImage.xpos+5, this.jackImage.ypos+5 );
+  //   };
+  // }
 }

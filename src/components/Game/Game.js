@@ -7,18 +7,30 @@ import Controls from './Controls/Controls';
 import './Game.css';
 import './icon-font.css';
 
+const defaultOptions = {
+  frameIndex: 0,
+  jack: {
+    url: './images/jack-eating.png',
+    xpos: 200,
+    ypos: 240
+  }
+};
+
+// console.log(defaultOptions);
+
 class Game extends Component {
   render() {
     return (
       <div id="js-game" className="game-container">
         <Overlay />
-        <Canvas />
+        <Canvas options={defaultOptions} />
         <Controls />
 
         <div className="game-information">
-          <h1>Feed Jack!</h1>
-          <p>Use the dropdowns below to select a food item or change the background.</p>
-          <p>You can change to a different item during the animation or stop the animation altogether.</p>
+          <h1>Feed Jack! React Application</h1>
+          <p>Click the <span className="icon-food">Food icon</span> in the top right corner to select different food items!</p>
+          <p>You can change his setting by selecting the <span className="icon-picture">Background icon</span></p>
+          <p>Use the animation controls to play, pause, stop, and increment through each frame.</p>
         </div>
       </div>
     );
