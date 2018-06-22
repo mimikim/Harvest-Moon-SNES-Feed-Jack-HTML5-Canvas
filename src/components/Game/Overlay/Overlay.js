@@ -12,31 +12,58 @@ import './Overlay.css';
 class Overlay extends Component {
   constructor(props) {
     super(props);
-    this.state = { isActive: false };
+    this.state = {
+      isActive: false,
+      selection: ''
+    };
+
     this.toggleOverlay = this.toggleOverlay.bind(this);
   }
 
-  toggleOverlay = () => {
+  toggleOverlay(e) {
+    let id = e.target.id;
+
     this.setState( (prevState) => ( {
-      isActive: ( ! prevState.isActive )
-    } ) );
+      isActive: ( ! prevState.isActive ),
+      selection: id
+    }));
   };
 
   render() {
     const isToggled = this.state.isActive;
+    const selection = this.state.selection;
+
     let classList = ( this.state.isActive ) ? 'overlay active' : 'overlay';
+    let content;
+
+    switch ( selection ) {
+      case 'food':
+        content =  <Food />;
+        break;
+      case 'background':
+        content = <Background />;
+        break;
+      case 'overlay':
+        content = <Info />;
+        break;
+      default:
+        break;
+    }
 
     return(
-      <div istoggled={ isToggled.toString() } className={classList} id="js-overlay">
-        <button className="button" id="js-overlay-button" onClick={this.toggleOverlay}>Show Overlay</button>
+      <div istoggled={ isToggled.toString() } className={classList}>
+        <div className="options">
+          <button className="button icon-food" id="food" onClick={this.toggleOverlay}><span>Change Food</span></button>
+          <button className="button icon-picture" id="background" onClick={this.toggleOverlay}><span>Change Background</span></button>
+          <button className="button icon-overlay" id="overlay" onClick={this.toggleOverlay}><span>Overlay</span></button>
+        </div>
         <div className="content">
-          <Food />
-          <Background />
-          <Info />
+          {content}
         </div>
       </div>
     );
   }
+
 }
 
 export default Overlay;

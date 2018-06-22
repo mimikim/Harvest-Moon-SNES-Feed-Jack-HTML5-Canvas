@@ -17,10 +17,38 @@
   }
 }
 
-.overlay > .button {
+.overlay > .content {
+  display: none;
+}
+
+.overlay > .options {
   float: right;
 }
 
-.overlay > .content {
-  display: none;
+.overlay > .options > .button {
+  display: inline-block;
+  font-size: 35px;
+  margin-right: 20px;
+  position: relative;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    > span {
+      display: block;
+    }
+  }
+
+  > span {
+    bottom: -35px;
+    display: none;
+    font-size: 14px;
+    left: 0;
+    position: absolute;
+    text-align: left;
+  }
 }

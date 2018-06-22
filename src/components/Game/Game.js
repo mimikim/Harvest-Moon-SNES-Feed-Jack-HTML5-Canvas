@@ -4,8 +4,8 @@ import Canvas from './Canvas/Canvas';
 import Overlay from './Overlay/Overlay';
 import Controls from './Controls/Controls';
 
-import './Game-init.js';
 import './Game.css';
+import './icon-font.css';
 
 class Game extends Component {
   render() {

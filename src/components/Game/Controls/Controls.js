@@ -8,10 +8,11 @@ class Controls extends Component {
   render() {
     return(
       <div className="controller">
-        <div>Play/Pause</div>
-        <div>Stop</div>
-        <div>Next Frame</div>
-        <div>Previous Frame</div>
+        <button className="icon-play">Play/Pause</button>
+        <button className="icon-pause">Pause</button>
+        <button className="icon-stop">Stop</button>
+        <button className="icon-fast-fw">Next Frame</button>
+        <button className="icon-fast-bw">Previous Frame</button>
       </div>
     );
   }
