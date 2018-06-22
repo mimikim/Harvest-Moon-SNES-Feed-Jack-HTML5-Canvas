@@ -7,9 +7,11 @@ Feed Jack! Application
 ## Description
 This interactive application creates animations using sprites from the SNES game, Harvest Moon.
 
-Version 3 takes what was created in v2 and converts it into a React application.
+Version 3 takes what was created in v2 and transforms it into a React application. It utilizes React, JSX, and ES6. 
 
-Features es6 class syntax, HTML5 Canvas, and and Pug. Dependencies managed through npm, tasks ran with Gulp. This application creates animations using sprites from the SNES game Harvest Moon.
+Dependencies are managed through webpack. 
+
+Features es6 class syntax, HTML5 Canvas, and and Pug. This application creates animations using sprites from the SNES game Harvest Moon.
 
 All food sprite data is assembled from a local JSON file and outputs into HTML for cleaner markup.
 
