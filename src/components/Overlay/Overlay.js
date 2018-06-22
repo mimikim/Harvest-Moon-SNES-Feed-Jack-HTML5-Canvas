@@ -3,12 +3,16 @@
 
 import React, {Component} from 'react';
 
-import Info from '../info';
+import Food from './Food/Food';
+import Background from './Background/Background';
+import Info from './Info/Info';
 
 class Overlay extends Component {
   render() {
     return(
       <div className="overlay" id="js-overlay">
+        <Food />
+        <Background />
         <Info />
       </div>
     );

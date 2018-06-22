@@ -1,3 +1,0 @@
-// loads food sprites
-
-
