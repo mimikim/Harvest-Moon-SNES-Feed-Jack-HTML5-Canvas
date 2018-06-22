@@ -1,8 +1,8 @@
 {
   "name": "harvest-moon-canvas-animation-game",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "canvas animation with snes spritesheets",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mimikim/Harvest-Moon-SNES-Feed-Jack-HTML5-Canvas.git"
   },
+  "private": true,
   "author": "Mimi Kim",
   "license": "ISC",
   "bugs": {
@@ -17,22 +18,14 @@
   },
   "homepage": "https://github.com/mimikim/Harvest-Moon-SNES-Feed-Jack-HTML5-Canvas#readme",
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-babel": "^7.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^4.0.2",
-    "gulp-notify": "^3.2.0",
-    "gulp-order": "^1.1.1",
-    "gulp-postcss": "^7.0.1",
-    "gulp-pug": "^3.3.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "postcss-svg": "^2.4.0"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   }
 }

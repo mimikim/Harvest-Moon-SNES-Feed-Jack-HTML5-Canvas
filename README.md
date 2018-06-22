@@ -7,7 +7,9 @@ Feed Jack! Application
 ## Description
 This interactive application creates animations using sprites from the SNES game, Harvest Moon.
 
-Version 2 is built with ES6 classes, HTML5 Canvas, and Pug. Dependencies managed through npm, tasks ran with Gulp. This application creates animations using sprites from the SNES game Harvest Moon.
+Version 3 takes what was created in v2 and converts it into a React application.
+
+Features es6 class syntax, HTML5 Canvas, and and Pug. Dependencies managed through npm, tasks ran with Gulp. This application creates animations using sprites from the SNES game Harvest Moon.
 
 All food sprite data is assembled from a local JSON file and outputs into HTML for cleaner markup.
 
@@ -19,3 +21,7 @@ Assets are within `/src`, and public-facing files are compiled into `/docs`.
 - [Babel](https://babeljs.io/)
 - [Gulp](https://gulpjs.com/)
 - [Pug](https://github.com/pugjs/pug)
+
+## Previous Releases
+Version 1 - original version!
+Version 2 - es6 classes, html5 canvas, and pug. gulp for dev automation
