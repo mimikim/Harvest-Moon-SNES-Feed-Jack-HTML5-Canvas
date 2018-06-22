@@ -21,13 +21,13 @@ module.exports = {
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
     path: path.resolve(__dirname, "docs/"),
-    publicPath: "/",
+    publicPath: "/docs/",
     filename: "script.js"
   },
   devServer: {
     contentBase: path.join(__dirname, "docs/"),
     port: 3000,
-    publicPath: "http://localhost:3000/docs/",
+    publicPath: "http://localhost:3000/",
     hotOnly: true
   },
   plugins: [ new webpack.HotModuleReplacementPlugin() ]

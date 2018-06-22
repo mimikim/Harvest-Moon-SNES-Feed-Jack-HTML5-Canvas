@@ -11,6 +11,8 @@ Version 3 takes what was created in v2 and transforms it into a React applicatio
 
 Dependencies are managed through webpack. 
 
+The application queries a Node.js back-end API to render the `<option>` html markup for the Food items selection. Browser-side, it queries another custom-written API to generate the user's selection.
+
 Features es6 class syntax, HTML5 Canvas, and and Pug. This application creates animations using sprites from the SNES game Harvest Moon.
 
 All food sprite data is assembled from a local JSON file and outputs into HTML for cleaner markup.
