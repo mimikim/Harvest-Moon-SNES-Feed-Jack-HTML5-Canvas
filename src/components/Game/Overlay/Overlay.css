@@ -1,0 +1,26 @@
+.overlay {
+  height: 100%;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+
+  &.active {
+    background: rgba( 0,0,0, 0.6 );
+    color: #fff;
+
+    > .content {
+      display: block;
+    }
+  }
+}
+
+.overlay > .button {
+  float: right;
+}
+
+.overlay > .content {
+  display: none;
+}

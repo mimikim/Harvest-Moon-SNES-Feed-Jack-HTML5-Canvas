@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import './assets/class-canvas.js';
-import './assets/canvas.css';
+import './Canvas-init.js';
+import './Canvas.css';
 
 class Canvas extends Component {
   render() {

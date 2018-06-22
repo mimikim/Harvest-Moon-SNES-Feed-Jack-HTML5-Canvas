@@ -1,4 +1,5 @@
 .canvas-container {
+  background:url('/images/home_winter.png') top left/contain no-repeat;
   height: 100%;
   width: 100%;
 

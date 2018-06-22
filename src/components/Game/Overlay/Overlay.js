@@ -7,13 +7,18 @@ import Food from './Food/Food';
 import Background from './Background/Background';
 import Info from './Info/Info';
 
+import './Overlay.css';
+
 class Overlay extends Component {
   render() {
     return(
       <div className="overlay" id="js-overlay">
-        <Food />
-        <Background />
-        <Info />
+        <button className="button" id="js-overlay-button">Show Overlay</button>
+        <div className="content">
+          <Food />
+          <Background />
+          <Info />
+        </div>
       </div>
     );
   }

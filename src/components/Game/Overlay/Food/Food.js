@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import './assets/food.css';
-import './assets/class-food.js';
+import './Food.css';
+import './Food-init.js';
 
 class Food extends Component {
   render() {
