@@ -4,7 +4,9 @@
   "description": "canvas animation with snes spritesheets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
