@@ -25,5 +25,5 @@ Assets are within `/src`, and public-facing files are compiled into `/docs`.
 - [Pug](https://github.com/pugjs/pug)
 
 ## Previous Releases
-Version 1 - original version!
-Version 2 - es6 classes, html5 canvas, and pug. gulp for dev automation
+- Version 1 - original version!
+- Version 2 - es6 classes, html5 canvas, and pug. gulp for dev automation
