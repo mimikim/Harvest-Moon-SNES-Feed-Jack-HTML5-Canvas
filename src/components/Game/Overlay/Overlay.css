@@ -22,17 +22,19 @@
 }
 
 .overlay > .options {
+  background: rgba( 255,255,255, 0.6 );
   float: right;
+  padding: 10px;
 }
 
 .overlay > .options > .button {
-  display: inline-block;
+  display: block;
   font-size: 35px;
-  margin-right: 20px;
+  margin-bottom: 20px;
   position: relative;
 
   &:last-of-type {
-    margin-right: 0;
+    margin-bottom: 0;
   }
 
   &:active,
@@ -44,11 +46,12 @@
   }
 
   > span {
-    bottom: -35px;
     display: none;
     font-size: 14px;
-    left: 0;
+    font-weight: bold;
     position: absolute;
-    text-align: left;
+    right: 70px;
+    text-align: right;
+    top: 0;
   }
 }

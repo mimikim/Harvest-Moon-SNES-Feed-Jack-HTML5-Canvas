@@ -14,6 +14,12 @@ class Game extends Component {
         <Overlay />
         <Canvas />
         <Controls />
+
+        <div className="game-information">
+          <h1>Feed Jack!</h1>
+          <p>Use the dropdowns below to select a food item or change the background.</p>
+          <p>You can change to a different item during the animation or stop the animation altogether.</p>
+        </div>
       </div>
     );
   }

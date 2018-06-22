@@ -5,7 +5,6 @@ import React, {Component} from 'react';
 
 import Food from './Food/Food';
 import Background from './Background/Background';
-import Info from './Info/Info';
 
 import './Overlay.css';
 
@@ -23,39 +22,50 @@ class Overlay extends Component {
   toggleOverlay(e) {
     let id = e.target.id;
 
-    this.setState( (prevState) => ( {
-      isActive: ( ! prevState.isActive ),
-      selection: id
-    }));
+    // if current button is not active, display content
+    if ( ! e.target.classList.contains('active') ) {
+
+      this.setState( (prevState) => ( {
+        isActive: true,
+        selection: id
+      }));
+
+    } else {
+      // else, if button is active, hide overlay
+
+      this.setState( (prevState) => ( {
+        // isActive: ( ! prevState.isActive ),
+        isActive: false
+      }));
+    }
+
   };
 
   render() {
     const isToggled = this.state.isActive;
-    const selection = this.state.selection;
-
-    let classList = ( this.state.isActive ) ? 'overlay active' : 'overlay';
+    let activeClass = ( isToggled ) ? ' active' : '';
     let content;
+    let foodClass = 'button icon-food';
+    let bgClass = 'button icon-picture';
 
-    switch ( selection ) {
+    switch ( this.state.selection ) {
       case 'food':
         content =  <Food />;
+        foodClass += activeClass;
         break;
       case 'background':
         content = <Background />;
-        break;
-      case 'overlay':
-        content = <Info />;
+        bgClass += activeClass;
         break;
       default:
         break;
     }
 
     return(
-      <div istoggled={ isToggled.toString() } className={classList}>
+      <div istoggled={ isToggled.toString() } className={`overlay${activeClass}`}>
         <div className="options">
-          <button className="button icon-food" id="food" onClick={this.toggleOverlay}><span>Change Food</span></button>
-          <button className="button icon-picture" id="background" onClick={this.toggleOverlay}><span>Change Background</span></button>
-          <button className="button icon-overlay" id="overlay" onClick={this.toggleOverlay}><span>Overlay</span></button>
+          <button className={foodClass} id="food" onClick={this.toggleOverlay}><span>Change Food</span></button>
+          <button className={bgClass} id="background" onClick={this.toggleOverlay}><span>Change Background</span></button>
         </div>
         <div className="content">
           {content}
