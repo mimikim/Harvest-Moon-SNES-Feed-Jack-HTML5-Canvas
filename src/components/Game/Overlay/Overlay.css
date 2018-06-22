@@ -19,6 +19,7 @@
 
 .overlay > .content {
   display: none;
+  height: 100%;
 }
 
 .overlay > .options {
