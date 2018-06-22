@@ -1,1 +1,0 @@
-// implements canvas class
