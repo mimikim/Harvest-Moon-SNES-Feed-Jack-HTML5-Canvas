@@ -9,3 +9,14 @@
   margin-bottom: 40px;
   margin-top: 40px;
 }
+
+.game-canvas {
+  background:url('/images/home_winter.png') top left/contain no-repeat;
+  height: 100%;
+  width: 100%;
+
+  > .canvas {
+    height: 100%;
+    width: 100%;
+  }
+}

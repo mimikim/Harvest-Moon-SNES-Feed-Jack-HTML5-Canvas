@@ -23,7 +23,11 @@ class Game extends Component {
     return (
       <div id="js-game" className="game-container">
         <Overlay />
-        <Canvas options={defaultOptions} />
+
+        <div className="game-canvas">
+          <Canvas options={defaultOptions} />
+        </div>
+
         <Controls />
 
         <div className="game-information">

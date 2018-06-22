@@ -70,6 +70,16 @@ class Canvas extends Component {
   }
 
   renderFrame( frameIndex ) {
+    /*  image element
+     *  x coordinates where to start clipping
+     *  y coordinate where to start clipping
+     *  width of clipped portion
+     *  height of clipped portion
+     *  x coordinate to place the image
+     *  y coordinate to place the image
+     *  width of image
+     *  height of image
+     */
     this.ctx.drawImage (
       this.jackImage,
       (frameIndex * 1045) / 11,
@@ -103,9 +113,7 @@ class Canvas extends Component {
   render() {
 
     return (
-      <div className="canvas-container" id="js-canvas-container">
-        <canvas ref="canvas" className="canvas" id="js-canvas" height="500" width="500">Canvas is not supported by your browser</canvas>
-      </div>
+      <canvas ref="canvas" className="canvas" height="500" width="500">Canvas is not supported by your browser</canvas>
     );
   }
 }
