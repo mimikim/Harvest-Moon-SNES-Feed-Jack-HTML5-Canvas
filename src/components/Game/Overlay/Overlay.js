@@ -24,7 +24,6 @@ class Overlay extends Component {
 
     // if current button is not active, display content
     if ( ! e.target.classList.contains('active') ) {
-
       this.setState( (prevState) => ( {
         isActive: true,
         selection: id
@@ -32,21 +31,21 @@ class Overlay extends Component {
 
     } else {
       // else, if button is active, hide overlay
-
       this.setState( (prevState) => ( {
-        // isActive: ( ! prevState.isActive ),
         isActive: false
       }));
     }
-
   };
+
+
 
   render() {
     const isToggled = this.state.isActive;
     let activeClass = ( isToggled ) ? ' active' : '';
-    let content;
     let foodClass = 'button icon-food';
     let bgClass = 'button icon-picture';
+    let content;
+    let selection;
 
     switch ( this.state.selection ) {
       case 'food':
@@ -62,7 +61,7 @@ class Overlay extends Component {
     }
 
     return(
-      <div istoggled={ isToggled.toString() } className={`overlay${activeClass}`}>
+      <div className={`overlay${activeClass}`} istoggled={ isToggled.toString() }>
         <div className="options">
           <button className={foodClass} id="food" onClick={this.toggleOverlay}><span>Change Food</span></button>
           <button className={bgClass} id="background" onClick={this.toggleOverlay}><span>Change Background</span></button>

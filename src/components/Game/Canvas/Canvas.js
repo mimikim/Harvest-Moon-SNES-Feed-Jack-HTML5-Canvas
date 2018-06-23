@@ -69,6 +69,7 @@ class Canvas extends Component {
     this.reset();
   }
 
+  // renders frameIndex frame
   renderFrame( frameIndex ) {
     /*  image element
      *  x coordinates where to start clipping
@@ -91,6 +92,34 @@ class Canvas extends Component {
       95,
       120
     );
+  }
+
+  // loop animation
+  loop() {
+
+    this.tickCount += 1;
+
+    // once tickcount > ticksperframe, we can update to the next frame
+    if ( this.tickCount > this.ticksPerFrame ) {
+
+      // set wait counter back to 0
+      this.tickCount = 0;
+
+      // increment frameIndex until one before the last frame
+      let isInRange = window.hmcanvas.frameIndex < ( this.numberOfFrames - 1 );
+      window.hmcanvas.frameIndex = isInRange ? window.hmcanvas.frameIndex += 1 : 0;
+
+      Jack.clearCanvas();
+      this.renderFrame( window.hmcanvas.frameIndex );
+
+      // only draw food for the first 3 frames
+      if( window.hmcanvas.frameIndex < 3 ) {
+        window.hmcanvas.food.draw( window.hmcanvas.ctx );
+      }
+    }
+
+    // remember to use either this.loop.bind(this), or use arrow function to ensure correct "this"
+    window.hmcanvas.requestID = window.requestAnimationFrame( () => this.loop() );
   }
 
   clearCanvas() {
