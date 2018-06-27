@@ -1,3 +1,226 @@
+@custom-media --small ( width >= 530px );
+@custom-media --medium ( width >= 900px );
+
+:root {
+  --blue: #003098;
+  --blue-light: #0068d0;
+
+  --black: #0a0a0a;
+  --white: #fefefe;
+
+  --gray: #cacaca;
+  --gray-light: #e6e6e6;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--black);
+  background: var(--white);
+  font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: inline-block;
+  vertical-align: baseline
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0
+}
+
+button {
+  overflow: visible
+}
+
+button,
+select {
+  text-transform: none
+}
+
+button,
+html input[type=button],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: not-allowed
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle
+}
+
+select {
+  width: 100%;
+  border-radius: 0;
+  appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  line-height: 1
+}
+
+p {
+  font-size: inherit;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-rendering: optimizeLegibility
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+  margin-top: 0;
+  margin-bottom: .5rem;
+  line-height: 1.4
+}
+
+h1 {
+  font-size: 1.5rem
+}
+
+@media screen and (min-width: 40em) {
+  h1 {
+    font-size: 3rem
+  }
+}
+
+[type=button],
+[type=submit] {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none
+}
+
+label {
+  display: block;
+  margin: 0;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--black)
+}
+
+select {
+  height: 2.4375rem;
+  padding: .5rem;
+  border: 1px solid var(--gray);
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: normal;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138,138,138%29'></polygon></svg>");
+  background-size: 9px 6px;
+  background-position: right -1rem center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  padding-right: 1.5rem
+}
+
+@media screen and (min-width: 0\0) {
+  select {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==)
+  }
+}
+
+select:disabled {
+  background-color: var(--gray-light);
+  cursor: not-allowed
+}
+
+select::-ms-expand {
+  display: none
+}
+
+select[multiple] {
+  height: auto;
+  background-image: none
+}
+
+.app {
+  margin: auto;
+  max-width: 1200px;
+  padding: 15px;
+  position: relative;
+}
+
+.credit {
+  font-size: 14px;
+  padding: 5px 15px 0;
+  text-align: right;
+
+  > a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: color 0.4s linear;
+
+    &:hover {
+      color: var(--blue-light);
+    }
+  }
+}
+
 .game-container {
   height: 600px;
   margin: auto;
@@ -11,12 +234,25 @@
 }
 
 .game-canvas {
-  background:url('/images/home_winter.png') top left/contain no-repeat;
+  /*background-image:url('/images/home_winter.png');*/
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 100%;
   width: 100%;
 
   > .canvas {
     height: 100%;
     width: 100%;
+  }
+}
+
+.controller {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+
+  > .button {
+    margin-right: 10px;
   }
 }

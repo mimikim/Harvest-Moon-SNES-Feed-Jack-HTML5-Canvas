@@ -18,5 +18,5 @@ All food sprite data is assembled from a local JSON file and outputs into HTML f
 Assets are within `/src`, and public-facing files are compiled into `/docs`. 
 
 ## Previous Releases
-- Version 1 - original version!
-- Version 2 - es6 classes, html5 canvas, and pug. gulp for dev automation
+- [Version 1](https://github.com/mimikim/Harvest-Moon-SNES-Feed-Jack-HTML5-Canvas/releases/tag/v1.0.0) - the original version!
+- [Version 2](https://github.com/mimikim/Harvest-Moon-SNES-Feed-Jack-HTML5-Canvas/releases/tag/v.2.0.0) - es6 classes, html5 canvas, and pug. gulp for dev automation

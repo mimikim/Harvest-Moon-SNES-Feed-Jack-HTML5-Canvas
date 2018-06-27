@@ -2,163 +2,163 @@
   {
     "name"  : "Berry of Wild Grape",
     "url"   : "./images/berryofwildgrape.png",
-    "x-pos" : "160",
-    "y-pos" : "240"
+    "xpos" : "160",
+    "ypos" : "240"
   },
   {
     "name"  : "Cake",
     "url"   : "./images/cake.png",
-    "x-pos" : "145",
-    "y-pos" : "250"
+    "xpos" : "145",
+    "ypos" : "250"
   },
   {
     "name"  : "Chicken",
     "url"   : "./images/chicken.png",
-    "x-pos" : "150",
-    "y-pos" : "235"
+    "xpos" : "150",
+    "ypos" : "235"
   },
   {
     "name"  : "Chicken Statue",
     "url"   : "./images/chicken-statue.png",
-    "x-pos" : "150",
-    "y-pos" : "235"
+    "xpos" : "150",
+    "ypos" : "235"
   },
   {
     "name"  : "Corn",
     "url"   : "./images/corn.png",
-    "x-pos" : "155",
-    "y-pos" : "245"
+    "xpos" : "155",
+    "ypos" : "245"
   },
   {
     "name"  : "Croissant",
     "url"   : "./images/croissant.png",
-    "x-pos" : "140",
-    "y-pos" : "250"
+    "xpos" : "140",
+    "ypos" : "250"
   },
   {
     "name"  : "Dumpling",
     "url"   : "./images/dumpling.png",
-    "x-pos" : "155",
-    "y-pos" : "250"
+    "xpos" : "155",
+    "ypos" : "250"
   },
   {
     "name"  : "Egg",
     "url"   : "./images/egg.png",
-    "x-pos" : "180",
-    "y-pos" : "245"
+    "xpos" : "180",
+    "ypos" : "245"
   },
   {
     "name"  : "Egg Broken",
     "url"   : "./images/egg-broken.png",
-    "x-pos" : "145",
-    "y-pos" : "245"
+    "xpos" : "145",
+    "ypos" : "245"
   },
   {
     "name"  : "Elf",
     "url"   : "./images/elf.png",
-    "x-pos" : "170",
-    "y-pos" : "230"
+    "xpos" : "170",
+    "ypos" : "230"
   },
   {
     "name"  : "Fancy Flower",
     "url"   : "./images/fancyflower.png",
-    "x-pos" : "145",
-    "y-pos" : "230"
+    "xpos" : "145",
+    "ypos" : "230"
   },
   {
     "name"  : "Fish",
     "url"   : "./images/fish.png",
-    "x-pos" : "160",
-    "y-pos" : "260"
+    "xpos" : "160",
+    "ypos" : "260"
   },
   {
     "name"  : "Flower",
     "url"   : "./images/flower.png",
-    "x-pos" : "150",
-    "y-pos" : "250"
+    "xpos" : "150",
+    "ypos" : "250"
   },
   {
     "name"  : "Hay",
     "url"   : "./images/hay.png",
-    "x-pos" : "140",
-    "y-pos" : "250"
+    "xpos" : "140",
+    "ypos" : "250"
   },
   {
     "name"  : "Herb",
     "url"   : "./images/herb.png",
-    "x-pos" : "165",
-    "y-pos" : "240"
+    "xpos" : "165",
+    "ypos" : "240"
   },
   {
     "name"  : "Milk Large",
     "url"   : "./images/milk-large.png",
-    "x-pos" : "145",
-    "y-pos" : "225"
+    "xpos" : "145",
+    "ypos" : "225"
   },
   {
     "name"  : "Milk Small",
     "url"   : "./images/milk-small.png",
-    "x-pos" : "155",
-    "y-pos" : "240"
+    "xpos" : "155",
+    "ypos" : "240"
   },
   {
     "name"  : "Mole",
     "url"   : "./images/mole.png",
-    "x-pos" : "150",
-    "y-pos" : "240"
+    "xpos" : "150",
+    "ypos" : "240"
   },
   {
     "name"  : "Potato",
     "url"   : "./images/potato.png",
-    "x-pos" : "160",
-    "y-pos" : "245"
+    "xpos" : "160",
+    "ypos" : "245"
   },
   {
     "name"  : "Potato Broken",
     "url"   : "./images/potato-broken.png",
-    "x-pos" : "145",
-    "y-pos" : "235"
+    "xpos" : "145",
+    "ypos" : "235"
   },
   {
     "name"  : "Power Berry",
     "url"   : "./images/powerberry.png",
-    "x-pos" : "160",
-    "y-pos" : "240"
+    "xpos" : "160",
+    "ypos" : "240"
   },
   {
     "name"  : "Rice Cake",
     "url"   : "./images/rice-cake.png",
-    "x-pos" : "155",
-    "y-pos" : "255"
+    "xpos" : "155",
+    "ypos" : "255"
   },
   {
     "name"  : "Rock",
     "url"   : "./images/rock.png",
-    "x-pos" : "150",
-    "y-pos" : "245"
+    "xpos" : "150",
+    "ypos" : "245"
   },
   {
     "name"  : "Tomato",
     "url"   : "./images/tomato.png",
-    "x-pos" : "160",
-    "y-pos" : "240"
+    "xpos" : "160",
+    "ypos" : "240"
   },
   {
     "name"  : "Turnip",
     "url"   : "./images/turnip.png",
-    "x-pos" : "160",
-    "y-pos" : "235"
+    "xpos" : "160",
+    "ypos" : "235"
   },
   {
     "name"  : "Weed",
     "url"   : "./images/weed.png",
-    "x-pos" : "150",
-    "y-pos" : "230"
+    "xpos" : "150",
+    "ypos" : "230"
   },
   {
     "name"  : "Winter Flower",
     "url"   : "./images/winterflower.png",
-    "x-pos" : "145",
-    "y-pos" : "225"
+    "xpos" : "145",
+    "ypos" : "225"
   }
 ]

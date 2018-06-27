@@ -1,28 +1,25 @@
 import React, {Component} from 'react';
-import Sprite from './Sprite';
-
-import './Food.css';
 import spriteSheet from './sprites.json';
+import './Food.css';
 
 class Food extends Component {
-
   constructor(props) {
     super(props);
-    this.returnSprite = this.returnSprite.bind(this);
-  }
-
-  returnSprite(e) {
-    console.log(e);
-    console.log(e.target);
   }
 
   render() {
     let allSprites = spriteSheet;
+    const { onSelectionChange } = this.props;
 
     return(
       <div className="food-sprites" id="js-foodsprites">
         { allSprites.map( ( sprite, i ) =>
-          <Sprite sprite={sprite} key={i} onClick={this.returnSprite} />
+
+          <button className="button" data-url={sprite.url} data-xvalue={sprite.xpos} data-yvalue={sprite.ypos} key={i} onClick={onSelectionChange}>
+            <img className="sprite" src={sprite.url} />
+            <span className="name">{sprite.name}</span>
+          </button>
+
         ) }
       </div>
     );
