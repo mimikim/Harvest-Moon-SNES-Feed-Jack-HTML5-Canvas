@@ -3,16 +3,12 @@ import spriteSheet from './sprites.json';
 import './Food.css';
 
 class Food extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let allSprites = spriteSheet;
     const { onSelectionChange } = this.props;
 
     return(
-      <div className="food-sprites" id="js-foodsprites">
+      <div className="food-sprites">
         { allSprites.map( ( sprite, i ) =>
 
           <button className="button" data-url={sprite.url} data-xvalue={sprite.xpos} data-yvalue={sprite.ypos} key={i} onClick={onSelectionChange}>
