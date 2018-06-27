@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
-import Game from './components/Game/Game';
+import Game from './Game/Game';
 import reducer from './redux-reducer';
 import defaultOptions from './config';
 
