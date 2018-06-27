@@ -222,10 +222,10 @@ select[multiple] {
 }
 
 .game-container {
-  height: 600px;
   margin: auto;
+  max-width: 650px;
+  min-width: 320px;
   position: relative;
-  width: 600px;
 }
 
 .game-information {

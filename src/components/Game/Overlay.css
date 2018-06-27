@@ -46,6 +46,19 @@
     }
   }
 
+  &.active {
+    &:before {
+      content: '\e806';
+    }
+
+    &:active,
+    &:focus {
+      &:before {
+        color: #000;
+      }
+    }
+  }
+
   > span {
     display: none;
     font-size: 14px;

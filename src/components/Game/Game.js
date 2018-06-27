@@ -137,14 +137,6 @@ class Game extends Component {
     this.play();
   }
 
-  // updates food image from store
-  _setFoodObj() {
-    this.food = new Image();
-    this.food.src =  this.props.store.food.url;
-    this.food.xpos = this.props.store.food.xpos;
-    this.food.ypos = this.props.store.food.ypos;
-  }
-
   loadCanvas( canvasElm ) {
     this.canvas = canvasElm;
     this.ctx = canvasElm.getContext( '2d' );
@@ -184,7 +176,7 @@ class Game extends Component {
   increment() {
     this.pause();
     this._clearCanvas();
-    this.frameIndex = ( this.frameIndex ===  9 ) ? 2 : this.frameIndex + 1;
+    this.frameIndex = ( this.frameIndex ===  (this.numberOfFrames - 1) ) ? 0 : this.frameIndex + 1;
     this._renderFrame( this.frameIndex );
   }
 
@@ -192,8 +184,16 @@ class Game extends Component {
   decrement() {
     this.pause();
     this._clearCanvas();
-    this.frameIndex = ( this.frameIndex === 2 ) ? 9 : this.frameIndex - 1;
+    this.frameIndex = ( this.frameIndex === 0 ) ? (this.numberOfFrames - 1) : this.frameIndex - 1;
     this._renderFrame( this.frameIndex );
+  }
+
+  // updates food image from store
+  _setFoodObj() {
+    this.food = new Image();
+    this.food.src =  this.props.store.food.url;
+    this.food.xpos = this.props.store.food.xpos;
+    this.food.ypos = this.props.store.food.ypos;
   }
 
   // renders frameIndex frame
@@ -275,17 +275,18 @@ class Game extends Component {
       <div className="app">
         <div id="js-game" className="game-container">
 
-          <div className={`overlay${activeClass}`} istoggled={ isToggled.toString() } >
-            <div className="options">
-              <button className={foodClass} id="food" onClick={this.toggleOverlay}><span>Change Food</span></button>
-              <button className={bgClass} id="background" onClick={this.toggleOverlay}><span>Change Background</span></button>
-            </div>
-            <div className="content">
-              {content}
-            </div>
-          </div>
-
           <div className="game-canvas" style={{ backgroundImage: `url(${background})`}}>
+
+            <div className={`overlay${activeClass}`} istoggled={ isToggled.toString() } >
+              <div className="options">
+                <button className={foodClass} id="food" onClick={this.toggleOverlay}><span>Change Food</span></button>
+                <button className={bgClass} id="background" onClick={this.toggleOverlay}><span>Change Background</span></button>
+              </div>
+              <div className="content">
+                {content}
+              </div>
+            </div>
+
             <Canvas onCanvasLoad={this.loadCanvas} />
           </div>
 
