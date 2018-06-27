@@ -1,0 +1,29 @@
+.bg-images {
+  > .button {
+    border: 3px solid transparent;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 2px;
+    width: 100px;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &.selected {
+      border-color: #fff;
+    }
+  }
+
+  .bg {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .name {
+    display: block;
+    line-height: normal;
+    margin-top: 8px;
+  }
+}

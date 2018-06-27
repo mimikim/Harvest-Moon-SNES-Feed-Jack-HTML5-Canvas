@@ -1,0 +1,51 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+.food-sprites {
+  height: 100%;
+  overflow: auto;
+  width: calc( 100% - 70px );
+
+  > .button {
+    border: 3px solid transparent;
+    height: auto;
+    margin: 10px;
+    width: 95px;
+
+    .selected,
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: #fff;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      .sprite {
+        animation: rotate 1.5s linear 0s infinite;
+      }
+    }
+  }
+
+  .name {
+    display: block;
+    line-height: normal;
+    margin-top: 8px;
+  }
+}

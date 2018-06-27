@@ -1,0 +1,30 @@
+[
+  {
+    "name" : "Home (Winter)",
+    "url"  : "./images/home_winter.png"
+  },
+  {
+    "name" : "Bedroom",
+    "url"  : "./images/home_bedroom.png"
+  },
+  {
+    "name" : "Church",
+    "url"  : "./images/church.png"
+  },
+  {
+    "name" : "Cow Shed",
+    "url"  : "./images/cow-shed.png"
+  },
+  {
+    "name" : "Fishing Spot (Winter)",
+    "url"  : "./images/fishing-spot.png"
+  },
+  {
+    "name" : "Kitchen",
+    "url"  : "./images/home_kitchen.png"
+  },
+  {
+    "name" : "Town Bar (Winter)",
+    "url"  : "./images/town_bar.png"
+  }
+]

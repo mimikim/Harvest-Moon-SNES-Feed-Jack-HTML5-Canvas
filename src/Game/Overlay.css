@@ -1,0 +1,71 @@
+.overlay {
+  height: 100%;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+
+  &.active {
+    background: rgba( 0,0,0, 0.6 );
+    color: #fff;
+
+    > .content {
+      display: block;
+    }
+  }
+}
+
+.overlay > .content {
+  display: none;
+  height: 100%;
+}
+
+.overlay > .options {
+  background: rgba( 255,255,255, 0.6 );
+  float: right;
+  padding: 10px;
+}
+
+.overlay > .options > .button {
+  display: block;
+  font-size: 35px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    > span {
+      display: block;
+    }
+  }
+
+  &.active {
+    &:before {
+      content: '\e806';
+    }
+
+    &:active,
+    &:focus {
+      &:before {
+        color: #000;
+      }
+    }
+  }
+
+  > span {
+    display: none;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    right: 70px;
+    text-align: right;
+    top: 0;
+  }
+}

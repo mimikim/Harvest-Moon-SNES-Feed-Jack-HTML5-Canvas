@@ -1,0 +1,164 @@
+[
+  {
+    "name"  : "Berry of Wild Grape",
+    "url"   : "./images/berryofwildgrape.png",
+    "xpos" : "160",
+    "ypos" : "240"
+  },
+  {
+    "name"  : "Cake",
+    "url"   : "./images/cake.png",
+    "xpos" : "145",
+    "ypos" : "250"
+  },
+  {
+    "name"  : "Chicken",
+    "url"   : "./images/chicken.png",
+    "xpos" : "150",
+    "ypos" : "235"
+  },
+  {
+    "name"  : "Chicken Statue",
+    "url"   : "./images/chicken-statue.png",
+    "xpos" : "150",
+    "ypos" : "235"
+  },
+  {
+    "name"  : "Corn",
+    "url"   : "./images/corn.png",
+    "xpos" : "155",
+    "ypos" : "245"
+  },
+  {
+    "name"  : "Croissant",
+    "url"   : "./images/croissant.png",
+    "xpos" : "140",
+    "ypos" : "250"
+  },
+  {
+    "name"  : "Dumpling",
+    "url"   : "./images/dumpling.png",
+    "xpos" : "155",
+    "ypos" : "250"
+  },
+  {
+    "name"  : "Egg",
+    "url"   : "./images/egg.png",
+    "xpos" : "180",
+    "ypos" : "245"
+  },
+  {
+    "name"  : "Egg Broken",
+    "url"   : "./images/egg-broken.png",
+    "xpos" : "145",
+    "ypos" : "245"
+  },
+  {
+    "name"  : "Elf",
+    "url"   : "./images/elf.png",
+    "xpos" : "170",
+    "ypos" : "230"
+  },
+  {
+    "name"  : "Fancy Flower",
+    "url"   : "./images/fancyflower.png",
+    "xpos" : "145",
+    "ypos" : "230"
+  },
+  {
+    "name"  : "Fish",
+    "url"   : "./images/fish.png",
+    "xpos" : "160",
+    "ypos" : "260"
+  },
+  {
+    "name"  : "Flower",
+    "url"   : "./images/flower.png",
+    "xpos" : "150",
+    "ypos" : "250"
+  },
+  {
+    "name"  : "Hay",
+    "url"   : "./images/hay.png",
+    "xpos" : "140",
+    "ypos" : "250"
+  },
+  {
+    "name"  : "Herb",
+    "url"   : "./images/herb.png",
+    "xpos" : "165",
+    "ypos" : "240"
+  },
+  {
+    "name"  : "Milk Large",
+    "url"   : "./images/milk-large.png",
+    "xpos" : "145",
+    "ypos" : "225"
+  },
+  {
+    "name"  : "Milk Small",
+    "url"   : "./images/milk-small.png",
+    "xpos" : "155",
+    "ypos" : "240"
+  },
+  {
+    "name"  : "Mole",
+    "url"   : "./images/mole.png",
+    "xpos" : "150",
+    "ypos" : "240"
+  },
+  {
+    "name"  : "Potato",
+    "url"   : "./images/potato.png",
+    "xpos" : "160",
+    "ypos" : "245"
+  },
+  {
+    "name"  : "Potato Broken",
+    "url"   : "./images/potato-broken.png",
+    "xpos" : "145",
+    "ypos" : "235"
+  },
+  {
+    "name"  : "Power Berry",
+    "url"   : "./images/powerberry.png",
+    "xpos" : "160",
+    "ypos" : "240"
+  },
+  {
+    "name"  : "Rice Cake",
+    "url"   : "./images/rice-cake.png",
+    "xpos" : "155",
+    "ypos" : "255"
+  },
+  {
+    "name"  : "Rock",
+    "url"   : "./images/rock.png",
+    "xpos" : "150",
+    "ypos" : "245"
+  },
+  {
+    "name"  : "Tomato",
+    "url"   : "./images/tomato.png",
+    "xpos" : "160",
+    "ypos" : "240"
+  },
+  {
+    "name"  : "Turnip",
+    "url"   : "./images/turnip.png",
+    "xpos" : "160",
+    "ypos" : "235"
+  },
+  {
+    "name"  : "Weed",
+    "url"   : "./images/weed.png",
+    "xpos" : "150",
+    "ypos" : "230"
+  },
+  {
+    "name"  : "Winter Flower",
+    "url"   : "./images/winterflower.png",
+    "xpos" : "145",
+    "ypos" : "225"
+  }
+]
