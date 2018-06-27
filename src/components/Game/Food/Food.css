@@ -16,9 +16,9 @@
   }
 }
 
-
 .food-sprites {
   height: 100%;
+  overflow: auto;
   width: calc( 100% - 70px );
 
   > .button {
@@ -40,15 +40,7 @@
       .sprite {
         animation: rotate 1.5s linear 0s infinite;
       }
-
-      .name {
-
-      }
     }
-  }
-
-  .sprite {
-
   }
 
   .name {
