@@ -11,7 +11,7 @@ Dependencies are managed through webpack.
 
 Features es6 class syntax, HTML5 Canvas, and and Pug. This application creates animations using sprites from the SNES game Harvest Moon.
 
-Assets are within `/src`, and public-facing files are compiled into `/docs`. 
+All asset and application source files are within `/src`, and all public-facing files are compiled into `/docs`. 
 
 ## Previous Releases
 - [Version 1](https://github.com/mimikim/Harvest-Moon-SNES-Feed-Jack-HTML5-Canvas/releases/tag/v1.0.0) - the original version!

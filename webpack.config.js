@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: "./src/index.js",
@@ -17,10 +18,18 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        exclude: /(node_modules|bower_components)/,
         use: [
           'style-loader',
           { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader'
+        ]
+      },
+      {
+        test: /\.pug/,
+        use: [
+          "html-loader",
+          "pug-html-loader"
         ]
       }
     ]
@@ -28,14 +37,21 @@ module.exports = {
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
     path: path.resolve(__dirname, "docs/"),
-    publicPath: "/docs/",
+    publicPath: "./",
     filename: "script.js"
   },
+
   devServer: {
     contentBase: path.join(__dirname, "docs/"),
     port: 3000,
     publicPath: "http://localhost:3000/",
     hotOnly: true
   },
-  plugins: [ new webpack.HotModuleReplacementPlugin() ]
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template : './src/index.pug',
+      inject   : true
+    })
+  ]
 };
