@@ -1,6 +1,6 @@
 {
   "name": "harvest-moon-canvas-animation-game",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "canvas animation with snes spritesheets",
   "main": "index.js",
   "scripts": {

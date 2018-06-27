@@ -303,6 +303,7 @@ class Game extends Component {
             <p>Click the <span className="icon-food">Food icon</span> in the top right corner to select different food items!</p>
             <p>You can change his setting by selecting the <span className="icon-picture">Background icon</span></p>
             <p>Use the animation controls to play, pause, stop, and increment through each frame.</p>
+            <p><a href="https://github.com/mimikim/Harvest-Moon-SNES-Feed-Jack-HTML5-Canvas" target="_blank">View Source on Github</a></p>
           </div>
 
         </div>
