@@ -225,7 +225,6 @@ select[multiple] {
   margin: auto;
   max-width: 650px;
   min-width: 320px;
-  position: relative;
 }
 
 .game-information {
@@ -234,11 +233,12 @@ select[multiple] {
 }
 
 .game-canvas {
-  /*background-image:url('/images/home_winter.png');*/
   background-position: top left;
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
+  overflow: hidden;
+  position: relative;
   width: 100%;
 
   > .canvas {
